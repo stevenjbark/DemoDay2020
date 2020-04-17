@@ -1,0 +1,126 @@
+{% macro navbar() -%}
+<!-- Navbar for test page -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light static-top mb-5 shadow ">
+  <div class="nav-container"></div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home
+                <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/States"> States
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/Counties"> Counties
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/models"> Machine Learning
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/clinicscrisis"> Clinics in Crisis: COVID-19
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+{%- endmacro %}
+
+{% macro footer() -%}
+
+      <!-- Footer -->
+<footer class="page-footer font-small blue pt-4">
+
+  <!-- Footer Links -->
+  <div class="container-fluid text-right text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 mt-3">
+
+        <!-- Content -->
+        <h5 class="text-uppercase font-weight-bold">Healthcare Viz Architects</h5>
+        <hr>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none pb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-3 mb-md-0 mb-3">
+
+        <!-- Links -->
+        <h5 class="text-uppercase font-weight-bold">Team Members</h5>
+        <hr>
+
+        <ul class="list-unstyled font-weight-bold">
+          <li>
+            <a>Steve Bark</a>
+          </li>
+          <li>
+            <a>Jessica Carns</a>
+          </li>
+          <li>
+            <a>Raquel McLellan</a>
+          </li>
+          <li>
+            <a>Eliana Suarez</a>
+            <li>
+              <a>Solicia Xu</a>
+            </li>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-3 mb-md-0 mb-3">
+
+        <!-- Links -->
+        <h5 class="text-uppercase font-weight-bold">Repositories</h5>
+        <hr>
+        <ul class="list-unstyled">
+          <li>
+            <a href="https://github.com/stevenjbark">StevenJBark</a>
+          </li>
+          <li>
+            <a href="https://github.com/jessishere">JessIsHere</a>
+          </li>
+          <li>
+            <a href="#!">Raquel McLellan</a>
+          </li>
+          <li>
+            <a href="#!">Eliana Suarez</a>
+          </li>
+          <li>
+            <a href="#!">Solicia Xu</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+
+{%- endmacro %}

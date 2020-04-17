@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macros %}
+{% block body %}
+
+
+{{ macros.navbar() }}
+
+
+
+<div class="container">
+
+    <div class="jumbotron shadow-lg p-3 mb-5 bg-light">
+        <h1 class="display-3">Health Clinics in Crisis:</h1>
+        <h1>COVID-19 Outbreak</h1>
+    </div><br>
+
+    <hr>
+
+
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <h2 class="text-center">To view the maps, hover mouse over each map to display control bar on left to enlarge, reduce, highlight, or move map.</h2>
+            <h2 class="text-center">Hover mouse over each county to see county identification and relevant data.</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <p>
+            The critical importance of health clinics in the healthcare infrastructure of the United States has become clear during the infection outbreak
+            of the Novel Coronavirus or COVID-19. The data presented below are for the total number of daily cases of COVID-19 and the daily number of deaths
+            attributed to COVID-19, both from January 22 to April 14, 2020.
+            </p>
+        </div>   
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div id="vizContainer" style="width:1600px; height:1000px;">
+        <div class='tableauPlaceholder' id='viz1587137218511' style='position: relative'>
+            <noscript>
+                <a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CO&#47;COVID-19_USA_Map2&#47;InfectionsDashboard&#47;1_rss.png' style='border: none' /></a>
+            </noscript>
+            <object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                <param name='embed_code_version' value='3' />
+                <param name='site_root' value='' />
+                <param name='name' value='COVID-19_USA_Map2&#47;InfectionsDashboard' />
+                <param name='tabs' value='no' /><param name='toolbar' value='yes' />
+                <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CO&#47;COVID-19_USA_Map2&#47;InfectionsDashboard&#47;1.png' />
+                <param name='animate_transition' value='yes' />
+                <param name='display_static_image' value='yes' />
+                <param name='display_spinner' value='yes' />
+                <param name='display_overlay' value='yes' />
+                <param name='display_count' value='yes' />
+            </object>
+        </div>                
+        <script type='text/javascript'>                    
+        var divElement = document.getElementById('viz1587137218511');                    
+        var vizElement = divElement.getElementsByTagName('object')[0];                    
+        if ( divElement.offsetWidth > 800 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='1650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='1087px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} 
+        else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='1650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='1087px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} 
+        else { vizElement.style.width='100%';vizElement.style.height='1000px';}                     
+        var scriptElement = document.createElement('script');                    
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+        </script>
+
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <p>
+            As demonstrated in the maps above, many outbreak regions are in population centers with particular focus in areas of moderate-to-lower income.
+            These areas often will not have major hospital infrastructure capable of handling large-scale outbreaks of infectious disease. However, even in places
+            where extensive hospital capacity is available (for example New York City), the COVID-19 pandemic has strained the healthcare infrastructure often to the breaking point.
+            </p>
+
+            <p>
+            Another important observation is the expanded number of infections observed in the Midwest and SouthEastern United States, often in predominantly
+            rural counties or counties surrounding the major population centers. These counties do not have the major healthcare infrastructure required to combat
+            a pandemic-level infection outbreak. As such, the local and regional health clinics play a critical role in protecting the populations they serve and
+            the entire health infrastructure of the United States.
+            </p>
+        </div>   
+    </div>
+
+</div>
+
+    {{ macros.footer() }}
+{% endblock %}

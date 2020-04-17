@@ -1,0 +1,26 @@
+body, html {
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #A7C7D7;
+}
+
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: center;
+}
+p {
+  font-size: 18px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+  
+  #map {
+    height: 500;
+    width: 700;
+    z-index: 1;
+  }
+
+  .page-holder {
+    min-height: 100vh;
+  }
+
+

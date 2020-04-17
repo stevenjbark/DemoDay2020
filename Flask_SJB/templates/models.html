@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+{% import 'macros.html' as macros %}
+{% block body %}
+
+
+{{ macros.navbar() }}
+
+<div class="container">
+    <div class="jumbotron shadow-lg p-3 mb-5 bg-light">
+      <h1 class="display-3">Machine Learning Models:</h1>
+      <h1>Random Forest Regression and K Nearest Neighbors</h1>
+    </div>
+    <!-- Start of website -->
+        <div class="row">
+          <div class="col-12">  
+              <h2>Random Forest Regression</h2>
+          </div>
+        </div>
+            
+            <hr>
+        <div class="row">
+          <div class="col-6">
+            <div class="card">
+              <h2>Optimized Random Forest Regression Models:</h2>
+              <h3>Predicted Fair/Poor Health and Years of Life Lost Per 100K</h3>
+              <p>The healthcare for US counties in 2019 was used to train a Random Forest Regression model on all health
+                data metrics (56 different metrics) to determine relative importances for model parameters. The top 10 model 
+                parameters were then used to construct an optimized regression model with nearly equivalent performance to the 
+                use of all health data metrics. The prediction fopr Fair/Poor Health is substantially better than for Years of Life Lost Per 100K, as indicated
+                by the R2 values of 0.988 and 0.919 for Training and Test Data (Fair/Poor Health), versus 0.977 and 0.868 for
+                Training and Test Data (Years of Life Lost Per 100K). The trends for data are faithfully represented by the models,
+                but all models demonstrate limited range of output values compared to actual data, suggesting the sensitivity of
+                Random Forest Regression may be insufficient for more rigorous analyses. Further optimization of either regression
+                approaches or alternative models including Neural Networks may be necessary to obtain more accurate predictive
+                capabilities. 
+              </p>
+
+            </div>
+
+          </div>
+            <div class="col-6 text-center">
+
+                <div class="panel panel-primary">
+                  <div class="panel-heading">
+                    <h3 class="panel-title">Enter Health Data Metrics</h3>
+                </div><br>
+
+
+                <form method=post enctype="multipart/form-data">
+
+                  <label for="Percent_Children_Living_in_Poverty">Percent_Children_Living_in_Poverty:</label>
+                  <input type="text" id="ChildPoverty" name="ChildPoverty"><br>
+                  <label for="Median_Household_Income">Median_Household_Income(MHI):</label>
+                  <input type="text" id="MHI" name="MHI"><br>
+                  <label for="Percent_Adult_Smokers" name="Percent_Adult_Smokers">Percent_Adult_Smokers:</label>
+                  <input for="text" id="AdultSmokers" name="AdultSmokers"><br>
+                  <label for="Percent_Non-Hispanic_White">Percent_Non-Hispanic_White:</label>
+                  <input type="text" id="Demographics" name="Demographics"><br>
+                  <label for="Teen_Birth_Rate">Teen_Birth_Rate:</label>
+                  <input type="text" id="TeenBirth" name="TeenBirth"><br>
+                  <label for="Percent_Adults_Excessive_Drinking">Percent_Adults_Excessive_Drinking:</label>
+                  <input type="text" id="Drinking" name="Drinking"><br>
+                  <label for="Premature_Age_Adjusted_Mortality_per_100K">Premature_Age_Adjusted_Mortality_per_100K:</label>
+                  <input type="text" id="Mortality" name="Mortality"><br>
+                  <label for="Percent_Adults_Physical_Inactivity">Percent_Adults_Physical_Inactivity:</label>
+                  <input type="text" id="Inactivity" name="Inactivity"><br>
+                  <label for="Percent_Pop_w/o_Adequate_Access_to_Food">Percent_Pop_w/o_Adequate_Access_to_Food:</label>
+                  <input type="text" id="FoodAccess" name="FoodAccess"><br>
+                  <label for="Percent_Age_65_and_over">Percent_Age_65_and_over:</label>
+                  <input type="text" id="Over65" name="Over65"><br>    
+        
+                  <input class="btn btn-primary" type="submit" value="Submit"> 
+                </form>
+
+                </div>
+
+                
+              <div class="card bg-warning">
+                <h4>Predicted Percent Fair/Poor Health by Random Forest Model: {{ result1 }}</h4>
+              </div>
+
+              <div class="card bg-success">
+                <h4>Predicted Years of Life Lost per 100K by Random Forest Model: {{ result2 }}</h4>
+              </div>
+              
+
+            </div><br><br>
+
+        <div>
+          <hr>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <hr>
+            
+            <h2>K Nearest Neighbors (KNN) Clustering</h2>
+            <div class="card">
+            
+            <p>Our KNN model used 10 primary factors identified from Random Forest Regression analysis, applying these parameters to
+              (1) initially evaluate the model based on current Counties with Community Health Centers data for delivery setting and
+              location types and (2) test if we could accurately identify the best Community Health Center setting and type. Our findings
+              demonstrated that an initial test demographic-focused model exhibited poor predictive capabilities. Dimensional reduction using
+              the 10 most impactful health factors from the Random Forest Regression modeling increased accuracy of KNN to 78-85%, 
+              depending on which target health center was identified.
+            </p>
+          </div>
+        </div>
+          </div>
+        </div>
+        <hr>
+        <br>
+       <br>
+</div>
+       {{ macros.footer() }}
+{% endblock %}
