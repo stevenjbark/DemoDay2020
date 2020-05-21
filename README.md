@@ -1,9 +1,8 @@
 # DemoDay2020
-Demo Day Repository 
+Improving Health Outcomes
 
-PROJECT: Improving Health Outcomes
-
-CONTRIBUTORS: This website/Flask application/machine learning site was constructed by:
+# Authors
+This website/Flask application/machine learning site was constructed by:
 
 Raquel McLellan
 Jessica Carns
@@ -13,20 +12,22 @@ Steven J. Bark
 
 All Copyrights Reserved.
 
+# Description
+Federally-funded local community and regional healthcare clinics are critical infrastructure for the healthcare of
+millions of Americans. As the COVID-19 Pandemic has revealed, these clinics have not been maintained at the appropriate
+level of effectiveness or funding. This project evaluated local community and regional healthcare clinics, geographical
+locations, health metrics at the county and state level, and employed machine learning algorithms to calculate clinic
+types and important health metrics.
 
-CONTENTS:
-Local Community and Regional Health Clinics Page
-State Maps Page
-County Maps Page
-Machine Learning Calculators for Clinic Types and Health Metrics (K Nearest Neighbors and Random Forest Regression)
+Local Community and Regional Health Clinics
+State Maps
+County Maps
+Calculators for Clinic Types and Health Metrics (K Nearest Neighbors and Randome Forest Regression)
 Clinics in Crisis: COVID-19 Dashboard
 
-DESCRIPTION:
-The recent outbreak of COVID-19 has demonstrated severe limitations in healthcare infrastructure in the United States. In many regions of the country, the primary mechanism for health care delivery are the local and regional health care clinics. We have evaluated the distribution and concepts used for federally-funded health care clinics in counties from all 50 states. Included in these evaluations maps and data tables, multiple pages for state and county data, machine learning approaches for estimating important parameters for health clinic performances, and a COVID-19 dashboard to relate outbreak information at the state and county level.
+# Deployment
+This website required Flask for deployment. After Flask installation, the website repository can be copied to your local
+computer and deployed directly. Future deployment on Heroku is planned.
 
-TOOLS USED:
-HTML
-JavaScript
-Tableau
-Flask (Construction of API, Data Repository, and User-Interactive Data Input System)
-NoSQL Database (MongoDB Database Construction and API)
+# Tools
+Python, Pandas, NumPy, Keras Machine Learning, Flask, MongoDB, HTML, CSS, JavaScript, Tableau
