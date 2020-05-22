@@ -1,5 +1,5 @@
 # DemoDay2020
-Improving Health Outcomes
+![DemoDay2020 Image](readme_img/DemoDay2020_1.PNG)
 
 # Authors
 This website/Flask application/machine learning site was constructed by:
